@@ -1,0 +1,48 @@
+
+Shell
+1. top -b -n 1 |grep httpd|wc -l
+2. rename ‘mig33/inner_folder/.txt/’ *.dat
+
+
+SQL
+1. 
+  SELECT date AS day, (
+  SELECT COUNT(score) 
+  FROM assessments
+  WHERE score > 0
+) AS num_pos_scores , (
+  SELECT COUNT(score) 
+  FROM assessments
+  WHERE score < 0
+) AS num_neg_scores
+FROM assessments
+WHERE date >= '01/03/2011 12:00:00 AM' 
+  AND 
+    date <= '30/04/2011 12:00:00 AM'
+
+2.
+  SELECT date AS  day
+  FROM assessments
+  WHERE date >= '01/01/2011 12:00:00 AM' 
+  AND 
+    date <= '30/06/2011 12:00:00 AM'
+  AND
+    score > 0
+
+
+Algorithmic
+file app.js
+
+
+Parallel and Concurrency
+Parallel on computer programming is like doing 2 things together. 
+For example we can texting while laying on the bed.
+
+Concurrency on computer programming is like doung 2 different things base on orders.
+For example we cannot singing while we eating, we need to finish eating first 
+then we can singing.
+BUT in computer programming, concurrency could be done. Its like asking your team-mate
+to singing while you eating.
+
+Parallel can be done on some tasks which can go together wihtout our team-mate help.
+Concurrency can be done on some tasks which need out team-mate help to do it. 
